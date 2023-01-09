@@ -1,0 +1,251 @@
+:root {
+    --html-color: gray;
+    --body-color: gold;
+    --navbar-color1: #2193b0;  /* fallback for old browsers */
+    --navbar-color2: linear-gradient(to right, #C4E0E5, #4CA1AF);
+    --navbar-color3: linear-gradient(to right, #b3ffab, #12fff7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    margin: auto;
+    padding: 5%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+#navlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+}
+
+#navbar li {
+    display: inline;
+}
+
+.navlinks {
+    padding: 10px;
+    background: linear-gradient(to right, #283E51, #4B79A1);
+    border-radius: 20%;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+.navlinks:hover {
+    background: var(--navbar-color2);
+    color: #000000;
+}
+
+#home {
+    margin: 0;
+    padding-top: 285px;
+    padding-bottom: 300px;
+    max-height: 100%;
+    width: 100%;
+    text-align: center;
+    animation: changeBg 50s infinite ease-in-out;
+    transition-delay: 3s;
+    transform: 2s;
+}
+
+
+#welcome {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    background: linear-gradient(to right, #283E51, #4B79A1);
+    color: beige;
+}
+
+#devise {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size: 2em;
+    color:blanchedalmond;
+    background: linear-gradient(to right, #C4E0E5, #4CA1AF);
+    transition: .2s transform ease-in-out;
+    animation: shake 0.82s infinite cubic-bezier(.36, .07, .19, .97) both;
+    will-change: transform;
+}
+
+#history, #administration, #news, #contact {
+    padding: 10px;
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#history {
+    background: #4B79A1;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: aliceblue;
+}
+
+#history h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#history h3, #history h2 {
+    font-style: italic;
+}
+
+#administration {
+    background: #4CA1AF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#news {
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: aliceblue;
+}
+
+#seisme-c {
+    display: grid;
+    column-gap: 0;
+    row-gap: 0;
+}
+
+.seisme-e:nth-of-type(1) {
+    padding: 0;
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.seisme-e:nth-of-type(2) {
+    padding: 0;
+    margin: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+#seisme-c img {
+    width: 80%;
+    height: 80%;
+}
+
+#contact {
+    text-align: center;
+    background: #2980b9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #12fff7 ;
+}
+
+@media only screen and (min-width: 600px) {
+    #history, #administration, #news {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+@keyframes shake {
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+      left: 0px;
+    }
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+  @keyframes changeBg {
+    0%,
+    10% {
+        background-image: url("./Page_img/Mazenod.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    10%,
+    20% {
+        background-image: url("./Page_img/Mazenod2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    20%,
+    30% {
+        background-image: url("./Page_img/Mazenod3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    30%,
+    40% {
+        background-image: url("./Page_img/Mazenod4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    40%,
+    50% {
+        background-image: url("./Page_img/Mazenod5.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    50%,
+    60% {
+        background-image: url("./Page_img/Mazenod6.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    60%,
+    70% {
+        background-image: url("./Page_img/Mazenod7.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    70%,
+    80% {
+        background-image: url("./Page_img/Mazenod8.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    80%,
+    90% {
+        background-image: url("./Page_img/Mazenod9.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    90%,
+    100% {
+        background-image: url("./Page_img/Mazenod10.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
